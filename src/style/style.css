@@ -83,7 +83,7 @@ body, .card, nav, footer {
 
 .holo-band {
     position: absolute;
-    width: 11%;
+    width: 17%;
     height: 200%; /* allows vertical randomness */
     filter: blur(55px);
     opacity: 0;
