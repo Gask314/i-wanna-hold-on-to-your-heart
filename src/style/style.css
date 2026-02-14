@@ -8,6 +8,7 @@
     --glass-bg: rgba(255, 255, 255, 0.65);
     --glass-border: rgba(255, 255, 255, 0.8);
     --shadow-dreamy: 0 10px 40px -10px rgba(180, 190, 210, 0.3);
+    --holo-opacity: 0.4;
 }
 
 * {
@@ -29,6 +30,7 @@ body {
 }
 
 /* --- Dark Mode Variables --- */
+html.dark-mode,
 body.dark-mode {
     --bg-color: #0f0f14;
     --bg-secondary: #1a1a22;
@@ -38,11 +40,10 @@ body.dark-mode {
     --glass-bg: rgba(20, 20, 30, 0.55);
     --glass-border: rgba(255, 255, 255, 0.1);
     --shadow-dreamy: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
-
-    margin: 6.8% 17% 6.8%;
+    --holo-opacity: 0.08;
 }
 
-body, .card, nav, footer {
+html, body, .card, nav, footer {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -105,10 +106,10 @@ body, .card, nav, footer {
         transform: translateY(0);
     }
     20% {
-        opacity: 0.45;
+        opacity: var(--holo-opacity);
     }
     80% {
-        opacity: 0.45;
+        opacity: var(--holo-opacity);
         background-position: 0% 100%;
         transform: translateY(-20%);
     }
