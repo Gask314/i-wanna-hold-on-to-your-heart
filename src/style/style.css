@@ -28,6 +28,56 @@ body {
     margin: 6.8% 17% 6.8%;
 }
 
+/* --- Holographic Vertical Bands Background --- */
+.holo-bands {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+    pointer-events: none;
+}
+
+.holo-band {
+    position: absolute;
+    width: 12%;
+    height: 200%; /* allows vertical randomness */
+    filter: blur(60px);
+    opacity: 0;
+    background: linear-gradient(
+        180deg,
+        #ffcbf2,
+        #dbe4ff,
+        #d4ffea,
+        #fff3b0
+    );
+    background-size: 100% 300%;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes holoFadeDrift {
+    0% {
+        opacity: 0;
+        background-position: 0% 0%;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 0.35;
+    }
+    80% {
+        opacity: 0.35;
+        background-position: 0% 100%;
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+}
+
 h1, h2, h3 {
     font-family: 'Cinzel', serif;
     font-weight: 400;
