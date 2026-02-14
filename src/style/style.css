@@ -147,7 +147,7 @@ h1, h2, h3 {
 
 .section-title {
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 5rem;
     margin-bottom: 3rem;
 }
 
@@ -242,6 +242,7 @@ nav {
     justify-content: center;
     text-align: center;
     position: relative;
+    margin-bottom: 17vh;
 }
 
 .moon-glow {
