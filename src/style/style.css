@@ -249,12 +249,12 @@ nav {
 
 .moon-glow {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(194, 202, 255, 0.8) 0%, rgba(255,255,255,0) 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(220, 225, 255, 0.8) 0%, rgba(255,255,255,0) 70%);
     border-radius: 50%;
     z-index: -1;
-    filter: blur(40px);
+    filter: blur(50px);
     animation: float 10s infinite ease-in-out;
     opacity: var(--moon-glow-opacity);
 }
