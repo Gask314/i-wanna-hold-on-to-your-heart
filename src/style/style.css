@@ -236,12 +236,13 @@ nav {
 }
 
 .hero {
-    height: 100vh;
+    height: 86.4vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+    margin-bottom: 6.8vh;
 }
 
 .moon-glow {
