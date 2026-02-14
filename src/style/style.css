@@ -62,7 +62,7 @@ h1, h2, h3 {
 
 .container {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 17% auto 0;
     padding: 0 2rem;
 }
 
