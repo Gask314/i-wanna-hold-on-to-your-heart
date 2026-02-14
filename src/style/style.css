@@ -89,9 +89,16 @@ body, .card, nav, footer {
     background: linear-gradient(
         180deg,
         #ffcbf2,
+        #ddbcf4,
+        #dbe4ff,
+        #c0ddf2,
+/* secondary highliht color #ddbcf4
+
+        #ffcbf2,
         #dbe4ff,
         #d4ffea,
         #fff3b0
+*/
     );
     background-size: 100% 300%;
     animation-timing-function: ease-in-out;
