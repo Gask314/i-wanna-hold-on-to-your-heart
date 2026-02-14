@@ -4,10 +4,12 @@
     --text-main: #505060;
     --text-light: #888899;
     --silver-accent: #c0c0d0;
-    --holo-gradient: linear-gradient(119deg, #ffcbf2 0%, #dbe4ff 25%, #d4ffea 50%, #fff3b0 75%, #ffcbf2 100%);
+    /*--holo-gradient: linear-gradient(119deg, #ffcbf2 0%, #dbe4ff 25%, #d4ffea 50%, #fff3b0 75%, #ffcbf2 100%);*/
+    --holo-gradient: linear-gradient(119deg, #ffcbf2 0%, #ddbcf4 25%, #dbe4ff 50%, #c0ddf2 75%, #ffcbf2 100%);
     --glass-bg: rgba(255, 255, 255, 0.65);
     --glass-border: rgba(255, 255, 255, 0.8);
     --shadow-dreamy: 0 10px 40px -10px rgba(180, 190, 210, 0.3);
+    --holo-opacity: 0.4;
 }
 
 * {
@@ -25,7 +27,104 @@ body {
         radial-gradient(circle at 10% 10%, rgba(200, 200, 255, 0.05) 0%, transparent 40%),
         radial-gradient(circle at 90% 90%, rgba(200, 200, 255, 0.05) 0%, transparent 40%);
 
-    margin: 6.8% 17% 6.8%;
+    padding: 6.8% 17% 6.8%;
+}
+
+/* --- Dark Mode Variables --- */
+body.dark-mode {
+    --bg-color: #0f0f14;
+    --bg-secondary: #1a1a22;
+    --text-main: #e6e6f0;
+    --text-light: #a0a0b5;
+    --silver-accent: #7a7a9a;
+    --glass-bg: rgba(20, 20, 30, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-dreamy: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+    --holo-opacity: 0.07;
+}
+
+body, .card, nav, footer {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--silver-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: #a0a0ff;
+    background: var(--holo-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* --- Holographic Vertical Bands Background --- */
+.holo-bands {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+    pointer-events: none;
+}
+
+.holo-band {
+    position: absolute;
+    width: 11%;
+    height: 200%; /* allows vertical randomness */
+    filter: blur(55px);
+    opacity: 0;
+    background: linear-gradient(
+        180deg,
+        #ffcbf2,
+        #ddbcf4,
+        #dbe4ff,
+        #c0ddf2
+    );
+    background-size: 100% 300%;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* secondary highliht color #ddbcf4
+
+        #ffcbf2,
+        #dbe4ff,
+        #d4ffea,
+        #fff3b0
+*/
+
+@keyframes holoFadeDrift {
+    0% {
+        opacity: 0;
+        background-position: 0% 0%;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: var(--holo-opacity);
+    }
+    80% {
+        opacity: var(--holo-opacity);
+        background-position: 0% 100%;
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
 }
 
 h1, h2, h3 {
@@ -50,8 +149,8 @@ h1, h2, h3 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: 600;
-    animation: shimmer 7s infinite linear;
+    font-weight: 700;
+    animation: shimmer 6s infinite linear;
     background-size: 200% auto;
 }
 
