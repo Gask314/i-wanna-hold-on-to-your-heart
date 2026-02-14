@@ -6,6 +6,110 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="container">
+        <div class="logo">Astra.</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#blog">Journal</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="moon-glow"></div><div class="container">
+            <h1>Building <span class="halo-text">Ethereal</span> Web Experiences</h1>
+            <p>I am a creative developer bridging the gap between design and code. Welcome to my digital garden.</p>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-layout">
+            <div class="about-text">
+                <p>Hello. I'm a designer and developer with a passion for minimalism and light. I believe the web should feel like a breath of fresh air.</p>
+                <p>My background is in UI/UX design, but I found my true calling in front-end development. I love creating interfaces that feel organic, using code to mimic the natural flow of light and physics.</p>
+                <p>When I'm not coding, I'm likely stargazing, reading sci-fi, or hunting for the perfect silver jewelry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Selected Works</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="card-meta">Web Design</span>
+                <h3>Project Luna</h3>
+                <p>A minimalist e-commerce platform for handmade jewelry. Focus on white space and micro-interactions.</p>
+                <a href="#" class="btn-link">View Case Study</a>
+            </div>
+            
+            <div class="card">
+                <span class="card-meta">App Development</span>
+                <h3>Nebula Tracker</h3>
+                <p>A productivity application that visualizes tasks as stars in a constellation.</p>
+                <a href="#" class="btn-link">View Case Study</a>
+            </div>
+
+            <div class="card">
+                <span class="card-meta">UI Kit</span>
+                <h3>Prism UI</h3>
+                <p>An open-source React component library utilizing glassmorphism and light physics.</p>
+                <a href="#" class="btn-link">View Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="container">
+        <h2>The Journal</h2>
+        <div class="grid">
+            <article class="card">
+                <span class="card-meta">October 12, 2025</span>
+                <h3>The Ethics of AI in Design</h3>
+                <p>Exploring how artificial intelligence changes the creative process without losing the human touch.</p>
+                <a href="#" class="btn-link">Read Article</a>
+            </article>
+
+            <article class="card">
+                <span class="card-meta">September 28, 2025</span>
+                <h3>CSS Gradients: A Deep Dive</h3>
+                <p>How to use multi-layered gradients to create holographic and iridescent effects on the web.</p>
+                <a href="#" class="btn-link">Read Article</a>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's Align Our Orbits</h2>
+            <p class="footer-subtext">Open for collaborations and freelance projects.</p>
+            
+            <div class="socials">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Instagram</a>
+            </div>
+            
+            <p style="font-size: 0.8rem; color: var(--silver-accent);">
+                &copy; 2025 Astra Portfolio. Crafted with Starlight.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
