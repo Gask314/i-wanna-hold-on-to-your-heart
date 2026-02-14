@@ -140,7 +140,7 @@ h1, h2, h3 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: 600;
+    font-weight: 700;
     animation: shimmer 7s infinite linear;
     background-size: 200% auto;
 }
