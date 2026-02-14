@@ -38,6 +38,8 @@ body.dark-mode {
     --glass-bg: rgba(20, 20, 30, 0.55);
     --glass-border: rgba(255, 255, 255, 0.1);
     --shadow-dreamy: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+
+    margin: 6.8% 17% 6.8%;
 }
 
 body, .card, nav, footer {
@@ -80,9 +82,9 @@ body, .card, nav, footer {
 
 .holo-band {
     position: absolute;
-    width: 12%;
+    width: 11%;
     height: 200%; /* allows vertical randomness */
-    filter: blur(50px);
+    filter: blur(55px);
     opacity: 0;
     background: linear-gradient(
         180deg,
@@ -103,10 +105,10 @@ body, .card, nav, footer {
         transform: translateY(0);
     }
     20% {
-        opacity: 0.5;
+        opacity: 0.45;
     }
     80% {
-        opacity: 0.5;
+        opacity: 0.45;
         background-position: 0% 100%;
         transform: translateY(-20%);
     }
