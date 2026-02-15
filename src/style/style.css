@@ -403,12 +403,6 @@ footer {
     color: var(--text-main);
 }
 
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .about-layout { flex-direction: column; }
-    .nav-links { display: none; }
-}
-
 /* --- Hamburger & Mobile Menu Styles --- */
 
 /* Initially hide mobile elements */
@@ -520,6 +514,19 @@ footer {
 .mobile-nav-links .theme-toggle {
     margin-top: 1rem;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { 
+        font-size: 2.5rem; 
+    }
+    .about-layout { 
+        flex-direction: column; 
+    }
+    .card {
+        justify-items: center;
+    }
+
 }
 
 /* --- Responsive Queries --- */
