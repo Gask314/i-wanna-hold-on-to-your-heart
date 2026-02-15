@@ -536,7 +536,7 @@ footer {
     }
 
 }
-
+/*
 @media (max-width: 700px) {
     body {
         padding: 6.8% 9%;
@@ -593,7 +593,7 @@ footer {
     }
 
 }
-
+*/
 
 /* --- Responsive Queries --- */
 @media (max-width: 900px) {
