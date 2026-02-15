@@ -523,10 +523,39 @@ footer {
     width: 100%;
 }
 
+@media (max-width: 570px) {
+    body {
+        padding: 6.8% 7%;
+    }
+}
+
+@media (max-width: 603px) {
+    body {
+        padding: 6.8% 8%;
+    }
+}
 
 @media (max-width: 636px) {
     body {
-        padding: 6.8% 7%;
+        padding: 6.8% 9%;
+    }
+}
+
+@media (max-width: 669px) {
+    body {
+        padding: 6.8% 10%;
+    }
+}
+
+@media (max-width: 702px) {
+    body {
+        padding: 6.8% 11%;
+    }
+}
+
+@media (max-width: 735px) {
+    body {
+        padding: 6.8% 12%;
     }
 }
 
@@ -541,7 +570,7 @@ footer {
         justify-items: center;
     }
     body {
-        padding: 6.8% 12%;
+        padding: 6.8% 13%;
     }
 }
 
