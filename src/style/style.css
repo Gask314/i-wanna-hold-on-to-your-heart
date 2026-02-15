@@ -232,7 +232,8 @@ nav {
     content: '';
     position: absolute;
     width: 0;
-    height: 1px;
+    height: 3px;
+    border-radius: 999px;
     bottom: -5px;
     left: 0;
     background: var(--holo-gradient);
@@ -500,7 +501,8 @@ footer {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 3px;
+    border-radius: 999px;
     bottom: -5px;
     left: 0;
     background: var(--holo-gradient);
