@@ -283,7 +283,7 @@ nav {
     margin: 0 auto;
 }
 
-.grid {
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -523,7 +523,7 @@ footer {
     .about-layout { 
         flex-direction: column; 
     }
-    .card {
+    .card-grid {
         justify-items: center;
     }
 
