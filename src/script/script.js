@@ -75,28 +75,3 @@ toggleBtns.forEach(btn => {
         });
     });
 });
-
-function durationToMs(durationStr) {
-  if (!durationStr) return 0;
-  const first = durationStr.split(',')[0].trim(); // handle multiple animations
-  if (first.endsWith('ms')) return parseFloat(first);
-  if (first.endsWith('s')) return parseFloat(first) * 1000;
-  // fallback: parseFloat may still work for bare numbers
-  return parseFloat(first) || 0;
-}
-
-const haloTextEls = document.querySelectorAll('.halo-text');
-
-haloTextEls.forEach(el => {
-  // compute style for this element
-  const style = window.getComputedStyle(el);
-  const durStr = style.animationDuration || style.getPropertyValue('animation-duration') || '0s';
-  const durationMs = durationToMs(durStr);
-
-  if (durationMs > 0) {
-    // pick a random offset within the animation length (0..duration)
-    const randomOffset = Math.floor(Math.random() * durationMs);
-    // negative delay jumps the animation ahead by that amount (so it appears randomized)
-    el.style.animationDelay = `-${randomOffset}ms`;
-  }
-});
