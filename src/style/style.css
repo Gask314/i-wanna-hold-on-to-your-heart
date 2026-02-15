@@ -28,7 +28,7 @@
 html, body {
     overflow-x: hidden;
     width: 100%;
-    position: relative; /* Helps contain absolute elements */
+    /*position: relative;  Helps contain absolute elements */
 }
 
 body {
@@ -536,64 +536,6 @@ footer {
     }
 
 }
-/*
-@media (max-width: 700px) {
-    body {
-        padding: 6.8% 9%;
-    }
-    .navbar {
-        max-width: 82;
-    }
-    .container, .card, nav, .navbar {
-        padding-left: 1.7rem;
-        padding-right: 1.7rem;
-    }
-
-}
-
-@media (max-width: 750px) {
-    body {
-        padding: 6.8% 11%;
-    }
-    .navbar {
-        max-width: 78;
-    }
-    .container, .card, nav, .navbar {
-        padding-left: 1.7rem;
-        padding-right: 1.7rem;
-    }
-
-}
-
-@media (max-width: 800px) {
-    body {
-        padding: 6.8% 13%;
-    }
-    .navbar {
-        max-width: 74;
-    }
-    .container, .card, nav, .navbar {
-        padding-left: 1.7rem;
-        padding-right: 1.7rem;
-    }
-
-}
-
-@media (max-width: 850px) {
-    body {
-        padding: 6.8% 15%;
-    }
-    .navbar {
-        max-width: 70;
-    }
-
-    .container, .card, nav, .navbar {
-        padding-left: 1.7rem;
-        padding-right: 1.7rem;
-    }
-
-}
-*/
 
 /* --- Responsive Queries --- */
 @media (max-width: 900px) {
