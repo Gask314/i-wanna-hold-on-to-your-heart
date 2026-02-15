@@ -34,7 +34,7 @@ body {
         radial-gradient(circle at 10% 10%, rgba(200, 200, 255, 0.05) 0%, transparent 40%),
         radial-gradient(circle at 90% 90%, rgba(200, 200, 255, 0.05) 0%, transparent 40%);
 
-    padding: 6.8% 17% 6.8%;
+    padding: 6.8% 17%;
 }
 
 /* --- Dark Mode Variables --- */
@@ -525,6 +525,10 @@ footer {
     }
     .card-grid {
         justify-items: center;
+    }
+
+    body {
+        padding: 6.8% 9%;
     }
 
 }
