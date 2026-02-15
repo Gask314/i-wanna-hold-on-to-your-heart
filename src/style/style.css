@@ -14,6 +14,9 @@
     --shadow-dreamy: 0 10px 40px -10px rgba(180, 190, 210, 0.3);
     --holo-opacity: 0.4;
     --moon-glow-opacity: 1;
+
+    --sidebar-color: #d3ecff34;
+    --sidebar-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -47,6 +50,9 @@ body.dark-mode {
     --shadow-dreamy: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
     --holo-opacity: 0.07;
     --moon-glow-opacity: 0.3;
+
+    --sidebar-color: #181e2234;
+    --sidebar-shadow: -10px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
 body, .card, nav, footer {
@@ -226,7 +232,8 @@ nav {
     content: '';
     position: absolute;
     width: 0;
-    height: 1px;
+    height: 3px;
+    border-radius: 999px;
     bottom: -5px;
     left: 0;
     background: var(--holo-gradient);
@@ -398,4 +405,136 @@ footer {
     .hero h1 { font-size: 2.5rem; }
     .about-layout { flex-direction: column; }
     .nav-links { display: none; }
+}
+
+/* --- Hamburger & Mobile Menu Styles --- */
+
+/* Initially hide mobile elements */
+.hamburger, .mobile-menu {
+    display: none;
+}
+
+/* Styles for the Hamburger Icon */
+.hamburger {
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--header-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for hamburger */
+.hamburger:hover span {
+    background-color: var(--text-main);
+}
+
+/* Mobile Menu Container (The slide-out drawer) */
+.mobile-menu {
+    position: fixed;
+    padding-top: 6.8vh;
+    top: 0;
+    right: -100%; /* Start off-screen to the right */
+    width: 250px; /* Or 100% for full screen */
+    height: 100vh;
+    background: var(--glass-bg);
+    background-color: var(--sidebar-color);
+    backdrop-filter: blur(8px);
+    border-left: 1px solid var(--glass-border);
+    box-shadow: var(--sidebar-shadow);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); /* Smooth ease-in */
+}
+
+/* Class added by JS to slide it in */
+.mobile-menu.active {
+    right: 0;
+}
+
+/* The Close "X" Button */
+.close-menu {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: var(--header-color);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.close-menu:hover {
+    color: var(--text-main);
+}
+
+/* Mobile Links Styling */
+.mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center; /* Center items horizontally */
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: var(--header-color);
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.mobile-nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 999px;
+    bottom: -5px;
+    left: 0;
+    background: var(--holo-gradient);
+    transition: width 0.3s;
+}
+
+.mobile-nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Dark Mode Button spacing */
+.mobile-nav-links .theme-toggle {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* --- Responsive Queries --- */
+@media (max-width: 900px) {
+    /* Hide desktop nav links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Ensure mobile menu is technically "displayed" so it can slide in, 
+       but hidden by the 'right' property defined above */
+    .mobile-menu {
+        display: flex; 
+    }
 }

@@ -21,8 +21,8 @@ import "../style/style.css";
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
     <div class="holo-bands"></div> <!-- create the background effect -->
-    <nav class="navbar"> <!-- navigation bar -->
-        <div class="logo">James Lee</div>
+    <nav class="navbar"> <div class="logo">James Lee</div>
+        
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -30,7 +30,23 @@ import "../style/style.css";
             <li><a href="#contact">Contact</a></li>
             <button class="theme-toggle">Dark Mode</button>
         </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+
+    <div class="mobile-menu">
+        <button class="close-menu">&times;</button> <ul class="mobile-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button class="theme-toggle">Dark Mode</button>
+        </ul>
+    </div>
 
     <section class="hero">
         <div class="moon-glow"></div><div class="container">

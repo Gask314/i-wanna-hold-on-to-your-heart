@@ -28,12 +28,50 @@ for (let i = 0; i < 4; i++) {
     setTimeout(createHoloBand, i * 2000);
 }
 
-const toggleBtn = document.querySelector('.theme-toggle');
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+/* --- Menu & Theme Logic --- */
 
-    toggleBtn.textContent = 
-        document.body.classList.contains('dark-mode') 
-        ? 'Light Mode' 
-        : 'Dark Mode';
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeBtn = document.querySelector('.close-menu');
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+
+// Function to open menu
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+});
+
+// Function to close menu
+closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+});
+
+// Close menu when clicking a link (optional UX improvement)
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside of it (optional)
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+    }
+});
+
+/* --- Dark Mode Toggle (Updated for Multiple Buttons) --- */
+// We use querySelectorAll because we have a button in the nav AND the mobile menu
+const toggleBtns = document.querySelectorAll('.theme-toggle');
+
+toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        
+        // Update text on ALL toggle buttons simultaneously
+        toggleBtns.forEach(b => {
+            b.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        });
+    });
 });
