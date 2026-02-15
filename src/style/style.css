@@ -14,6 +14,9 @@
     --shadow-dreamy: 0 10px 40px -10px rgba(180, 190, 210, 0.3);
     --holo-opacity: 0.4;
     --moon-glow-opacity: 1;
+
+    --sidebar-color: #d3ecff34;
+    --sidebar-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -47,6 +50,9 @@ body.dark-mode {
     --shadow-dreamy: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
     --holo-opacity: 0.07;
     --moon-glow-opacity: 0.3;
+
+    --sidebar-color: #181e2234;
+    --sidebar-shadow: -10px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
 body, .card, nav, footer {
@@ -400,7 +406,6 @@ footer {
     .nav-links { display: none; }
 }
 
-
 /* --- Hamburger & Mobile Menu Styles --- */
 
 /* Initially hide mobile elements */
@@ -440,9 +445,10 @@ footer {
     width: 250px; /* Or 100% for full screen */
     height: 100vh;
     background: var(--glass-bg);
-    backdrop-filter: blur(15px);
+    background-color: var(--sidebar-color);
+    backdrop-filter: blur(8px);
     border-left: 1px solid var(--glass-border);
-    box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+    box-shadow: var(--sidebar-shadow);
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -483,10 +489,21 @@ footer {
 
 .mobile-nav-links a {
     text-decoration: none;
-    color: var(--text-main);
+    color: var(--header-color);
     font-size: 1.2rem;
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
+}
+
+.mobile-nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--holo-gradient);
+    transition: width 0.3s;
 }
 
 /* Mobile Dark Mode Button spacing */
@@ -496,7 +513,7 @@ footer {
 }
 
 /* --- Responsive Queries --- */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     /* Hide desktop nav links */
     .nav-links {
         display: none;
