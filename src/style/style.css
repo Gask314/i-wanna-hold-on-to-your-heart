@@ -238,7 +238,7 @@ nav {
 }
 
 .hero {
-    height: 86.4vh;
+    min-height: 86.4vh;
     display: flex;
     align-items: center;
     justify-content: center;
