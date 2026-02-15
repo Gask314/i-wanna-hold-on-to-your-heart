@@ -541,12 +541,18 @@ footer {
     body {
         padding: 6.8% 9%;
     }
+    .container {
+        padding: 0 1.2rem;
+    }
 
 }
 
 @media (max-width: 750px) {
     body {
         padding: 6.8% 11%;
+    }
+    .container {
+        padding: 0 1.4rem;
     }
 
 }
@@ -555,12 +561,18 @@ footer {
     body {
         padding: 6.8% 13%;
     }
+    .container {
+        padding: 0 1.6rem;
+    }
 
 }
 
 @media (max-width: 850px) {
     body {
         padding: 6.8% 15%;
+    }
+    .container {
+        padding: 0 1.8rem;
     }
 
 }
