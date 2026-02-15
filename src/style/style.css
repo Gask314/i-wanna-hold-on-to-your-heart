@@ -506,6 +506,10 @@ footer {
     transition: width 0.3s;
 }
 
+.mobile-nav-links a:hover::after {
+    width: 100%;
+}
+
 /* Mobile Dark Mode Button spacing */
 .mobile-nav-links .theme-toggle {
     margin-top: 1rem;
