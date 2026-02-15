@@ -524,6 +524,12 @@ footer {
 }
 
 
+@media (max-width: 636px) {
+    body {
+        padding: 6.8% 9%;
+    }
+}
+
 @media (max-width: 768px) {
     .hero h1 { 
         font-size: 2.5rem; 
@@ -534,7 +540,9 @@ footer {
     .card-grid {
         justify-items: center;
     }
-
+    body {
+        padding: 6.8% 13%;
+    }
 }
 
 /* --- Responsive Queries --- */
