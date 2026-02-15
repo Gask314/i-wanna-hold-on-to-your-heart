@@ -449,7 +449,7 @@ footer {
     right: -100%; /* Start off-screen to the right */
     width: 250px; /* Or 100% for full screen */
     height: 100vh;
-    background: var(--glass-bg);
+    /*background: var(--glass-bg);*/
     background-color: var(--sidebar-color);
     backdrop-filter: blur(8px);
     border-left: 1px solid var(--glass-border);
