@@ -444,7 +444,7 @@ footer {
 /* Mobile Menu Container (The slide-out drawer) */
 .mobile-menu {
     position: fixed;
-    padding-top: 6.8vh;
+    padding-top: 0;
     top: 0;
     right: -100%; /* Start off-screen to the right */
     width: 250px; /* Or 100% for full screen */
@@ -464,6 +464,7 @@ footer {
 /* Class added by JS to slide it in */
 .mobile-menu.active {
     right: 0;
+    padding-top: 5.8vh;
 }
 
 /* The Close "X" Button */
