@@ -25,6 +25,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative; /* Helps contain absolute elements */
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: var(--bg-color);
