@@ -493,6 +493,7 @@ footer {
     font-size: 1.2rem;
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
+    position: relative;
 }
 
 .mobile-nav-links a::after {
