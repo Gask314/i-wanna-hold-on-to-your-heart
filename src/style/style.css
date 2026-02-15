@@ -541,8 +541,8 @@ footer {
     body {
         padding: 6.8% 9%;
     }
-    .container {
-        padding: 0 1.2rem;
+    .container, .card, nav, .navbar {
+        padding: 0 0.8rem;
     }
 
 }
@@ -551,8 +551,8 @@ footer {
     body {
         padding: 6.8% 11%;
     }
-    .container {
-        padding: 0 1.4rem;
+    .container, .card, nav, .navbar {
+        padding: 0 1.1rem;
     }
 
 }
@@ -561,8 +561,8 @@ footer {
     body {
         padding: 6.8% 13%;
     }
-    .container {
-        padding: 0 1.6rem;
+    .container, .card, nav, .navbar {
+        padding: 0 1.4rem;
     }
 
 }
@@ -571,8 +571,8 @@ footer {
     body {
         padding: 6.8% 15%;
     }
-    .container {
-        padding: 0 1.8rem;
+    .container, .card, nav, .navbar {
+        padding: 0 1.7rem;
     }
 
 }
