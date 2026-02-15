@@ -542,7 +542,7 @@ footer {
 
 @media (max-width: 868px) {
     body {
-        padding: 6.8% 12%;
+        padding: 6.8% 8%;
     }
 
 }
@@ -563,5 +563,9 @@ footer {
        but hidden by the 'right' property defined above */
     .mobile-menu {
         display: flex; 
+    }
+
+    body {
+        padding: 6.8% 12%;
     }
 }
