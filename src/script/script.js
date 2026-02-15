@@ -22,7 +22,7 @@ function createHoloBand() {
         createHoloBand(); // spawn a new one
     }, duration);
 }
-
+ 
 // Create initial bands
 for (let i = 0; i < 4; i++) {
     setTimeout(createHoloBand, i * 2000);
