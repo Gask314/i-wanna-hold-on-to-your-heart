@@ -441,7 +441,7 @@ footer {
 /* Mobile Menu Container (The slide-out drawer) */
 .mobile-menu {
     position: fixed;
-    margin-top: 6.8vh;
+    padding-top: 6.8vh;
     top: 0;
     right: -100%; /* Start off-screen to the right */
     width: 250px; /* Or 100% for full screen */
