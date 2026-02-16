@@ -153,7 +153,7 @@ body, .card, nav, footer {
 }
 
 h1, h2, h3 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
     font-weight: 400;
     letter-spacing: 2px;
     color: var(--header-color);
@@ -213,7 +213,7 @@ nav {
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -497,7 +497,7 @@ footer {
     text-decoration: none;
     color: var(--header-color);
     font-size: 1.2rem;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
     text-transform: uppercase;
     position: relative;
 }
